@@ -592,6 +592,12 @@ body {
     display: block;
     aspect-ratio: 9/16;
     background: var(--color-bg-elevated);
+    cursor: pointer;
+}
+
+.clip-card video:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
 }
 
 .clip-overlay {

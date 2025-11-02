@@ -172,3 +172,25 @@ window.addEventListener('load', () => {
         document.body.style.opacity = '1';
     }, 100);
 });
+
+// Autoplay videos on scroll
+const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+            video.play().catch(err => {
+                // Autoplay was prevented, that's okay
+                console.log('Autoplay prevented:', err);
+            });
+        } else {
+            video.pause();
+        }
+    });
+}, {
+    threshold: 0.5 // Play when 50% of video is visible
+});
+
+// Observe all clip videos
+document.querySelectorAll('.clip-video').forEach(video => {
+    videoObserver.observe(video);
+});
