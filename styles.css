@@ -203,6 +203,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
+    text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -305,29 +306,7 @@ body {
     display: block;
     aspect-ratio: 16/9;
     background: var(--color-bg);
-}
-
-.vsl-placeholder {
-    width: 100%;
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-bg);
-}
-
-.vsl-placeholder-content {
-    text-align: center;
-    color: var(--color-text-secondary);
-}
-
-.vsl-placeholder-content svg {
-    color: var(--color-accent);
-    margin-bottom: var(--spacing-md);
-}
-
-.vsl-placeholder-content p {
-    font-size: 0.9375rem;
+    border: none;
 }
 
 .vsl-cta {
@@ -913,6 +892,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
+    text-decoration: none;
 }
 
 .btn-primary-large:hover {
