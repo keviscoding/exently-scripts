@@ -194,3 +194,30 @@ const videoObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.clip-video').forEach(video => {
     videoObserver.observe(video);
 });
+
+// Tap to unmute/mute videos
+document.querySelectorAll('.clip-card').forEach(card => {
+    const video = card.querySelector('.clip-video');
+    const soundIndicator = card.querySelector('.sound-indicator');
+    
+    card.addEventListener('click', () => {
+        if (video.muted) {
+            // Unmute this video
+            video.muted = false;
+            soundIndicator.textContent = '🔊';
+            
+            // Mute all other videos
+            document.querySelectorAll('.clip-video').forEach(otherVideo => {
+                if (otherVideo !== video) {
+                    otherVideo.muted = true;
+                    const otherIndicator = otherVideo.parentElement.querySelector('.sound-indicator');
+                    if (otherIndicator) otherIndicator.textContent = '🔇';
+                }
+            });
+        } else {
+            // Mute this video
+            video.muted = true;
+            soundIndicator.textContent = '🔇';
+        }
+    });
+});
