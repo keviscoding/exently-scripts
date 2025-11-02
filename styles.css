@@ -270,6 +270,76 @@ body {
     color: var(--color-text-tertiary);
 }
 
+/* VSL Section */
+.vsl-section {
+    background: var(--color-bg-elevated);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--spacing-3xl) 0;
+}
+
+.vsl-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.vsl-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.vsl-video-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    margin-bottom: var(--spacing-xl);
+}
+
+.vsl-video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
+    background: var(--color-bg);
+}
+
+.vsl-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+}
+
+.vsl-placeholder-content {
+    text-align: center;
+    color: var(--color-text-secondary);
+}
+
+.vsl-placeholder-content svg {
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-md);
+}
+
+.vsl-placeholder-content p {
+    font-size: 0.9375rem;
+}
+
+.vsl-cta {
+    text-align: center;
+}
+
+.vsl-cta-note {
+    margin-top: var(--spacing-md);
+    font-size: 0.875rem;
+    color: var(--color-text-tertiary);
+}
+
 /* Intelligence Section */
 .intelligence {
     max-width: 1200px;
